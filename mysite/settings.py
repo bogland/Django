@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # shkim
     'bookmark.apps.BookmarkConfig',
-    'bookmark.apps.BlogConfig',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
