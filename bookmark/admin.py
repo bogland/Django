@@ -6,4 +6,3 @@ from bookmark.models import Bookmark
 class BookmarkAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'url')
 
-
