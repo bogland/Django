@@ -44,7 +44,8 @@ INSTALLED_APPS = [
 
     'bookmark.apps.BookmarkConfig',
     'blog.apps.BlogConfig',
-    'photo.apps.PhotoConfig'
+    'photo.apps.PhotoConfig',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,4 @@ TAGGIT_LIMIT = 50
 DISQUS_SHORTNAME = 'hhhuh-com'
 DISQUS_MY_DOMAIN = 'http://127.0.0.1:8000'
 
+LOGIN_REDIRECT_URL = '/'

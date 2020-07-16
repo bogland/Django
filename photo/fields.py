@@ -13,7 +13,7 @@ def _add_thumb(s):
 
 class ThumbnailImageFieldFile(ImageFieldFile):
 
-    @property
+    @property   #property를 쓰면 함수지만 속성처럼 쓸 수 있다.
     def thumb_path(self):
         return _add_thumb(self.path)
 
@@ -21,7 +21,7 @@ class ThumbnailImageFieldFile(ImageFieldFile):
     def thumb_url(self):
         return _add_thumb(self.url)
 
-    def save(self, name, content, save = True):
+    def save(self, name, content, save=True):
         super().save(name, content, save)
 
         img = Image.open(self.path)
