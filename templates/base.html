@@ -50,7 +50,7 @@
           </div>
         </li>
       </ul>
-      <ul class=""navbar-nav ml-5 mr-5">
+      <ul class="navbar-nav ml-5 mr-5">
         <li class="nav-item dropdown mx-1 btn ">
           {% if user.is_active %}
           <a class="'nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
@@ -76,7 +76,21 @@
 </nav>
 
 <!-- Page Header -->
-{% block header %} {% endblock %}
+{% block header %}
+<header class="masthead" style="background-image: url({% static 'img/home-bg.jpg' %})">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Clean Blog</h1>
+          <span class="subheading">A Blog Theme by Start Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}
 <!-- Main Content -->
 {% block content %} {% endblock %}
 <hr>

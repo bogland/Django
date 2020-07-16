@@ -1,17 +1,33 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% load static %}
 
 {% block title %}bookmark_list.html{% endblock %}
-
 {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
 
-    <h1>Bookmark List</h1>
-    <br>
+            <h1>Bookmark List</h1>
+            <a class="btn btn-primary" href="<% url 'bookmark.update' %>" role="button">
+                <button type="button" class="btn btn-primary">Create</button>
+            </a>
+            <a class="btn btn-primary" href="#" role="button">
+                <button type="button" class="btn btn-primary">Update</button>
+            </a>
+            <a class="btn btn-primary" href="#" role="button">
+                <button type="button" class="btn btn-primary">Delete</button>
+            </a>
 
-    <ul>
-        {% for bookmark in object_list %}
-        <li><a href="{% url 'bookmark:detail' bookmark.id %}">{{ bookmark }}</a></li>
-        {% endfor %}
-    </ul>
+            <br>
+
+            <ul>
+                {% for bookmark in object_list %}
+                <li><a href="{% url 'bookmark:detail' bookmark.id %}">{{ bookmark }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
 
